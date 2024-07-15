@@ -8,10 +8,11 @@ app = Flask(__name__)
 
 # 1) - CRIANDO E CONFIGUANDO O BANCO DE DADOS !!!
 
+# F60zytwlE9tqNsPP
 # Criar um instância de SQLAlchemy
 app.config['SECRET_KEY'] = 'FSD2323f#$!SAH'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:NXDpBWs06VcYHlaG@db.oyyodnntrigdmxgqydom.supabase.co:5432/postgres'
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://usuario:senha@localhost:5432/nomedobanco'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres.usieobkcpnzvkfznduku:[F60zytwlE9tqNsPP]@aws-0-sa-east-1.pooler.supabase.com:6543/postgres'
+# app.config['SQLALCHEMY_DATABASE_URI'] = ''
 db = SQLAlchemy(app)
 db: SQLAlchemy
 
@@ -46,7 +47,7 @@ def inicializar_banco():
         db.create_all()
         # Criar usuários adminstradores
         autor = Autor(nome='Jefferson Santos', email='fshubble@gmail.com',
-                    senha='#@123456#@', admin=True)
+                    senha='F60zytwlE9tqNsPP', admin=True)
         db.session.add(autor)
         db.session.commit()
 
